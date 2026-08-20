@@ -47,8 +47,9 @@ ICT-LAB-PROJECT/
 
 ## Purpose
 
-This project was developed as part of the **ICT coursework at Bahria University** to apply fundamental web development concepts and build a complete multi-page website from scratch.
+This project was developed as part of the **ICT coursework at Bahria University, 1st semester** to apply fundamental and surface web development concepts and build a complete multi-page website from scratch.
 
+## NOTE -> Recent additions in CSS were made after mastering web development 
 ## Author
 
 **Abdul Samad**
