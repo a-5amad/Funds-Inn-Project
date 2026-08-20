@@ -1,0 +1,924 @@
+/* ============================================================
+   SECTION 1: GLOBAL / COMMON STYLES 
+   (Reset, Body, Accessibility, Common Animations, Utils)
+   ============================================================ */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Slab", serif;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Accessibility: focus styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid orange;
+  outline-offset: 2px;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shared Background Animation Class */
+.hero,
+.highlights,
+.payment-partners {
+  background: linear-gradient(45deg, #000, #222, #000);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+}
+
+/* CTA button (global) */
+.cta-btn,
+.cta .btn {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+  border: 0;
+}
+
+.cta-btn:hover,
+.cta .btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Common Highlights Grid Styles */
+.highlights {
+  padding: 60px 20px;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+  border-top: 2px solid orange;
+  text-align: center;
+}
+
+.highlights h2 {
+  font-size: 3rem;
+  color: orange;
+  margin-bottom: 15px;
+}
+
+.highlights .subheading {
+  font-size: 1.2rem;
+  color: darkgray;
+  margin-bottom: 40px;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 25px;
+  padding: 0 10px;
+}
+
+.highlight-card {
+  background: transparent;
+  color: orange;
+  padding: 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.25);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(30px);
+  text-align: left;
+}
+
+.highlight-card:hover {
+  background: linear-gradient(145deg, orange, #ffcc66);
+  color: #000;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.highlight-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #ddd;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ============================================================
+   SECTION 2: RASAB'S PORTION 
+   (Index, Account, Terms + Footer)
+   ============================================================ */
+
+/* --- Index / Home Page --- */
+.hero {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  color: rgba(255, 166, 0, 0.945);
+  letter-spacing: 1px;
+}
+
+.hero h4 {
+  font-size: 2.5rem;
+  margin-top: -50px;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin: 20px 0;
+  color: darkgray;
+  margin-top: -25px;
+  max-width: 800px;
+}
+
+.payment-partners {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.payment-partners h2 {
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.payment-partners .subheading {
+  font-size: 1.1rem;
+  color: darkgray;
+  margin-bottom: 30px;
+}
+
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.partners-logos img {
+  height: 55px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.partners-logos img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.funding-rules {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.funding-rules h2 {
+  font-size: 2.5rem;
+  color: orange;
+}
+
+.funding-rules ol {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  color: darkgray;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.funding-rules li {
+  transition: color 0.3s ease;
+}
+
+.funding-rules li:hover {
+  color: orange;
+}
+
+.trading-conditions {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #000;
+  border-top: 2px solid rgba(255, 166, 0, 0.575);
+  border-bottom: 2px solid rgba(255, 166, 0, 0.575);
+}
+
+.trading-conditions h2 {
+  font-size: 2.5rem;
+  color: orange;
+}
+
+.trading-conditions p {
+  max-width: 800px;
+  margin: auto;
+  color: darkgray;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.trading-conditions ol {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  color: darkgray;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.trading-conditions ol li {
+  transition: color 0.3s ease;
+}
+
+.trading-conditions ol li:hover {
+  color: orange;
+}
+
+.cta {
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 12px;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.cta_btn {
+  color: orange; 
+  text-decoration: none; 
+  font-weight: 700; 
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.cta_btn:hover {
+  color: #643904;
+  text-decoration: underline; 
+}
+
+/* --- Account Page --- */
+.account-wrapper {
+  background: linear-gradient(45deg, #000, #222, #000);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+  padding: 40px 0;
+}
+
+.account-info {
+  margin-top: -40px;
+  text-align: center;
+  padding: 60px 20px;
+  height: 500px;
+}
+
+.account-info h1 {
+  font-size: 80px;
+  color: orange;
+  margin-top: 190px;
+  margin-bottom: 0px;
+}
+
+.account-info p {
+  margin-top: 0px;
+  font-size: 1rem;
+  color: darkgray;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.account-info h3 {
+  margin-top: 0px;
+  margin-bottom: 190px;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.filters {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filters label {
+  color: orange;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filters select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+}
+
+.account-types {
+  padding: 40px 20px 80px;
+  text-align: center;
+  background: #000;
+  border-top: 2px solid rgba(255, 166, 0, 0.575);
+  border-bottom: 2px solid rgba(255, 166, 0, 0.575);
+}
+
+.account-types h2 {
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: #111;
+  color: orange;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+
+.tab-btn.active {
+  background: orange;
+  color: #000;
+}
+
+.tab-btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.25);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h3 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.tab-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: darkgray;
+}
+
+#toggleView {
+  margin: 20px auto;
+  display: block;
+  background: orange;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#toggleView:hover {
+  background: #fff;
+  color: #000;
+}
+
+.account-types table {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.3);
+}
+
+.account-types th,
+.account-types td {
+  border: 1px solid #444;
+  padding: 12px;
+  text-align: center;
+}
+
+.account-types th {
+  background: #111;
+  color: orange;
+  font-weight: bold;
+}
+
+.account-types tr:nth-child(even) {
+  background: #222;
+}
+
+.account-types tr:hover {
+  background: rgba(255, 165, 0, 0.2);
+  cursor: pointer;
+}
+
+.card-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card-view.hidden {
+  display: none;
+}
+
+.account-card {
+  background: #111;
+  border: 1px solid orange;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  color: #fff;
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.account-card h3 {
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.account-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+}
+
+/* --- Terms Page --- */
+.terms-content {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 30px;
+  background: black;
+  border-radius: 8px;
+  line-height: 1.7;
+  height: 400px;
+  margin-bottom: 130%;
+}
+
+.terms-content h2 {
+  font-size: 1.6rem;
+  color: orange;
+  margin-top: 25px;
+}
+
+.terms-content p {
+  color: rgb(202, 193, 193);
+  margin: 15px 0;
+}
+
+.terms-content ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.terms-content li {
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.terms-content li:hover {
+  color: orange;
+}
+
+/* --- FOOTER (Rasab) --- */
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  color: orange;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer .disclaimer {
+  margin-top: 30px;
+  text-align: left;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: darkgray;
+  padding: 20px;
+}
+
+footer .disclaimer h3 {
+  color: orange;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+footer .disclaimer ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+footer .disclaimer li {
+  margin-bottom: 5px;
+}
+
+.newsletter {
+  background: #000;
+  padding: 10px 10px;
+  text-align: center;
+  min-height: 140px;
+  border-radius: 10px;
+}
+
+.newsletter p {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+  background: #fff;
+  color: #333;
+}
+
+.newsletter input[type="email"]::placeholder {
+  color: #888;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.2s ease;
+}
+
+.newsletter button:hover {
+  background: #e69500;
+  color: #fff;
+}
+
+
+/* ============================================================
+   SECTION 3: SAMAD'S PORTION 
+   (About, FAQ, Login, Register + Header/Nav)
+   ============================================================ */
+
+/* --- HEADER & NAV (Samad) --- */
+header {
+  background: #111;
+  padding: 03px 40px;
+  text-align: center;
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+}
+
+header nav {
+  display: inline-block;
+  left: 50%; 
+  position: absolute;
+  transform: translateX(-50%);
+  white-space: nowrap; 
+}
+
+.logo {
+   height: 50px; 
+    width: auto; 
+    display: inline-block;
+    transition: filter 0.3s ease;  
+    transform: translateX(80%);
+}
+
+.logo:hover
+{
+    filter: drop-shadow(0 0px 10px rgba(233, 144, 10, 0.945));
+}
+
+header nav a {
+  color: orange;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 3px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+header nav a.active {
+  color: #fff;
+  border-bottom: 2px solid orange;
+}
+
+/* --- About & FAQ Page Styles --- */
+.page-hero {
+  background: linear-gradient(45deg, #000, #222, #000);
+  background-size: 600% 600%;
+  animation: gradientAnimation 10s ease-in-out infinite;
+  text-align: center;
+  padding: 60px 20px;
+  height: 700px;
+  border-top: 1px solid rgba(255, 166, 0, 0.041);
+  border-bottom: 2px solid rgba(255, 166, 0, 0.575);
+}
+
+.page-hero h1 {
+  font-size: 80px;
+  color: orange;
+  margin-top: 190px;
+  margin-bottom: 0px;
+}
+
+.page-hero h2 {
+  font-size: 1.8rem;
+}
+
+.page-hero p {
+  margin-top: 0px;
+  font-size: 1rem;
+  color: darkgray;
+}
+
+.page-hero h3 {
+  margin-top: 0px;
+  margin-bottom: 190px;
+  font-size: 2.5rem;
+}
+
+.search-container {
+    margin: 30px auto 50px; 
+    max-width: 750px; 
+    border: 3px solid rgb(223, 211, 185); 
+    border-radius: 5px; 
+    background-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
+    display: flex;
+}
+
+#faqSearch {
+    flex-grow: 1; 
+    padding: 10px 15px;
+    border: none;
+    background-color: #090600;
+    color: #fff;
+    font-size: 1rem;
+    outline: none; 
+}
+
+.search-btn {
+    background-color: black;
+    color: orange;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+    background-color: #3a3a39; 
+}
+
+/* --- Login & Register Page Styles --- */
+.page-hero-log-reg {
+    min-height: 90vh; 
+    display: flex;             
+    justify-content: center;   
+    align-items: center; 
+    padding: 20px;
+    background-color: #000;    
+    background: linear-gradient(45deg, #000, #222, #000);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease-in-out infinite;  
+    border-top: 1px solid rgba(255, 166, 0, 0.041);
+  border-bottom: 2px solid rgba(255, 166, 0, 0.575);
+}
+
+.log-reg-container {
+    width: 100%;
+    max-width: 450px; 
+    padding: 30px;
+    text-align: center;
+    background-color: #111; 
+    border: 1px solid orange; 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.login-container h2 {
+    color: orange;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #fff; 
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #333; 
+    border-radius: 6px;
+    background-color: #000; 
+    color: #fff;
+    font-size: 1.05rem;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: orange; 
+    outline: none;
+}
+
+.login-btn-themed {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: orange;
+    color: #f0ecec; 
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+}
+
+.login-btn-themed:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #f9f5f5; 
+}
+
+
+/* ============================================================
+   SECTION 4: MEDIA QUERIES (Organized by portion)
+   ============================================================ */
+
+/* --- COMMON / GLOBAL MEDIA QUERIES --- */
+@media (max-width: 1200px) {
+  .highlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .highlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- RASAB'S PORTION MEDIA QUERIES --- */
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  .hero h4 {
+    font-size: 2rem;
+    margin-top: -20px;
+  }
+  .account-info h1 {
+    font-size: 56px;
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .partners-logos {
+    gap: 20px;
+  }
+  .terms-content {
+    margin: 24px auto;
+    padding: 20px;
+  }
+  .account-types table {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+  .hero h4 {
+    font-size: 1.6rem;
+    margin-top: -10px;
+  }
+}
+
+
+/* --- SAMAD'S PORTION MEDIA QUERIES --- */
+@media (max-width: 600px) {
+  header nav {
+    position: static;  
+    transform: none;   
+    width: 100%;
+  }
+  header nav a {
+    margin: 0 5px;
+    font-size: 14px;
+  }
+  .logo {
+    height: 35px; 
+    margin-right: 8px; 
+  }
+  .page-hero {
+    padding: 40px 16px;
+  }
+}
