@@ -518,12 +518,11 @@ input:focus-visible {
 .terms-content {
   max-width: 100%;
   margin: 40px auto;
+  margin-bottom: 40px;
   padding: 30px;
   background: black;
   border-radius: 8px;
   line-height: 1.7;
-  height: 400px;
-  margin-bottom: 130%;
 }
 
 .terms-content h2 {

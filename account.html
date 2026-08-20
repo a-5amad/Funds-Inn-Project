@@ -1,274 +1,393 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accounts</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <a href="index.html"><img src="css/logo/Capture.PNG" alt="Logo" class="logo"></a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="account.html" class="active">Account</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="about.html">About Us</a>
-      <a href="faq.html">FAQ</a>
-      <a href="login.html">Login</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accounts</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <a href="index.html"
+        ><img src="css/logo/Capture.PNG" alt="Logo" class="logo"
+      /></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="account.html" class="active">Account</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="about.html">About Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </header>
 
-  <!-- Animated Wrapper -->
-  <div class="account-wrapper">
-    <!-- Account Information -->
-    <section class="account-info">
-      <h1>FundsInn Accounts</h1>
-      <p>We evaluate according to objectives that best fit your style. From beginners to experts, traders from 195+ countries trust our platform.</p>
-      <h3>Trade your Edge with Two-Step Accounts</h3>
-    </section>
+    <!-- Animated Wrapper -->
+    <div class="account-wrapper">
+      <!-- Account Information -->
+      <section class="account-info">
+        <h1>FundsInn Accounts</h1>
+        <p>
+          We evaluate according to objectives that best fit your style. From
+          beginners to experts, traders from 195+ countries trust our platform.
+        </p>
+        <h3>Trade your Edge with Two-Step Accounts</h3>
+      </section>
 
-    <!-- Filters -->
-    <section class="filters">
-      <label for="balance">Filter by Balance:</label>
-      <select id="balance">
-        <option value="all">All</option>
-        <option value="small">Under $10,000</option>
-        <option value="medium">$25,000 - $50,000</option>
-        <option value="large">$100,000+</option>
-      </select>
-    </section>
+      <!-- Filters -->
+      <section class="filters">
+        <label for="balance">Filter by Balance:</label>
+        <select id="balance">
+          <option value="all">All</option>
+          <option value="small">Under $10,000</option>
+          <option value="medium">$25,000 - $50,000</option>
+          <option value="large">$100,000+</option>
+        </select>
+      </section>
 
-    <!-- Tabs -->
-    <section class="account-types">
-      <h2>Account Types</h2>
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="basic">Basic</button>
-        <button class="tab-btn" data-tab="starter">Starter</button>
-        <button class="tab-btn" data-tab="advanced">Advanced</button>
-        <button class="tab-btn" data-tab="professional">Professional</button>
-        <button class="tab-btn" data-tab="elite">Elite</button>
-      </div>
+      <!-- Tabs -->
+      <section class="account-types">
+        <h2>Account Types</h2>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="basic">Basic</button>
+          <button class="tab-btn" data-tab="starter">Starter</button>
+          <button class="tab-btn" data-tab="advanced">Advanced</button>
+          <button class="tab-btn" data-tab="professional">Professional</button>
+          <button class="tab-btn" data-tab="elite">Elite</button>
+        </div>
 
-      <!-- Tab Content -->
-      <div class="tab-content active" id="basic">
-        <h3>Basic Account</h3>
-        <ul>
-          <li>Initial Balance: $5,000</li>
-          <li>Profit Target: 6%</li>
-          <li>Max Drawdown: 8%</li>
-          <li>Fee: $49</li>
-        </ul>
-      </div>
+        <!-- Tab Content -->
+        <div class="tab-content active" id="basic">
+          <h3>Basic Account</h3>
+          <ul>
+            <li>Initial Balance: $5,000</li>
+            <li>Profit Target: 6%</li>
+            <li>Max Drawdown: 8%</li>
+            <li>Fee: $49</li>
+          </ul>
+        </div>
 
-      <div class="tab-content" id="starter">
-        <h3>Starter Account</h3>
-        <ul>
-          <li>Initial Balance: $10,000</li>
-          <li>Profit Target: 8%</li>
-          <li>Max Drawdown: 10%</li>
-          <li>Fee: $99</li>
-        </ul>
-      </div>
+        <div class="tab-content" id="starter">
+          <h3>Starter Account</h3>
+          <ul>
+            <li>Initial Balance: $10,000</li>
+            <li>Profit Target: 8%</li>
+            <li>Max Drawdown: 10%</li>
+            <li>Fee: $99</li>
+          </ul>
+        </div>
 
-      <div class="tab-content" id="advanced">
-        <h3>Advanced Account</h3>
-        <ul>
-          <li>Initial Balance: $25,000</li>
-          <li>Profit Target: 10%</li>
-          <li>Max Drawdown: 12%</li>
-          <li>Fee: $199</li>
-        </ul>
-      </div>
+        <div class="tab-content" id="advanced">
+          <h3>Advanced Account</h3>
+          <ul>
+            <li>Initial Balance: $25,000</li>
+            <li>Profit Target: 10%</li>
+            <li>Max Drawdown: 12%</li>
+            <li>Fee: $199</li>
+          </ul>
+        </div>
 
-      <div class="tab-content" id="professional">
-        <h3>Professional Account</h3>
-        <ul>
-          <li>Initial Balance: $50,000</li>
-          <li>Profit Target: 12%</li>
-          <li>Max Drawdown: 15%</li>
-          <li>Fee: $299</li>
-        </ul>
-      </div>
+        <div class="tab-content" id="professional">
+          <h3>Professional Account</h3>
+          <ul>
+            <li>Initial Balance: $50,000</li>
+            <li>Profit Target: 12%</li>
+            <li>Max Drawdown: 15%</li>
+            <li>Fee: $299</li>
+          </ul>
+        </div>
 
-      <div class="tab-content" id="elite">
-        <h3>Elite Account</h3>
-        <ul>
-          <li>Initial Balance: $100,000</li>
-          <li>Profit Target: 15%</li>
-          <li>Max Drawdown: 20%</li>
-          <li>Fee: $599</li>
-        </ul>
-      </div>
+        <div class="tab-content" id="elite">
+          <h3>Elite Account</h3>
+          <ul>
+            <li>Initial Balance: $100,000</li>
+            <li>Profit Target: 15%</li>
+            <li>Max Drawdown: 20%</li>
+            <li>Fee: $599</li>
+          </ul>
+        </div>
 
-      <!-- Toggle View -->
-      <button id="toggleView">Switch to Card View</button>
+        <!-- Toggle View -->
+        <button id="toggleView">Switch to Card View</button>
 
-      <!-- Table View -->
-      <table>
-        <tr>
-          <th>Account Type</th>
-          <th>Initial Balance</th>
-          <th>Profit Target</th>
-          <th>Max Drawdown</th>
-          <th>Fee</th>
-        </tr>
-        <tr><td>Basic</td><td>$5,000</td><td>6%</td><td>8%</td><td>$49</td></tr>
-        <tr><td>Starter</td><td>$10,000</td><td>8%</td><td>10%</td><td>$99</td></tr>
-        <tr><td>Advanced</td><td>$25,000</td><td>10%</td><td>12%</td><td>$199</td></tr>
-        <tr><td>Professional</td><td>$50,000</td><td>12%</td><td>15%</td><td>$299</td></tr>
-        <tr><td>Elite</td><td>$100,000</td><td>15%</td><td>20%</td><td>$599</td></tr>
-      </table>
+        <!-- Table View -->
+        <table>
+          <tr>
+            <th>Account Type</th>
+            <th>Initial Balance</th>
+            <th>Profit Target</th>
+            <th>Max Drawdown</th>
+            <th>Fee</th>
+          </tr>
+          <tr>
+            <td>Basic</td>
+            <td>$5,000</td>
+            <td>6%</td>
+            <td>8%</td>
+            <td>$49</td>
+          </tr>
+          <tr>
+            <td>Starter</td>
+            <td>$10,000</td>
+            <td>8%</td>
+            <td>10%</td>
+            <td>$99</td>
+          </tr>
+          <tr>
+            <td>Advanced</td>
+            <td>$25,000</td>
+            <td>10%</td>
+            <td>12%</td>
+            <td>$199</td>
+          </tr>
+          <tr>
+            <td>Professional</td>
+            <td>$50,000</td>
+            <td>12%</td>
+            <td>15%</td>
+            <td>$299</td>
+          </tr>
+          <tr>
+            <td>Elite</td>
+            <td>$100,000</td>
+            <td>15%</td>
+            <td>20%</td>
+            <td>$599</td>
+          </tr>
+        </table>
 
-      <!-- Card View -->
-      <div class="card-view hidden">
-        <div class="account-card"><h3>Basic</h3><p>Balance: $5,000</p><p>Profit Target: 6%</p><p>Drawdown: 8%</p><p>Fee: $49</p></div>
-        <div class="account-card"><h3>Starter</h3><p>Balance: $10,000</p><p>Profit Target: 8%</p><p>Drawdown: 10%</p><p>Fee: $99</p></div>
-        <div class="account-card"><h3>Advanced</h3><p>Balance: $25,000</p><p>Profit Target: 10%</p><p>Drawdown: 12%</p><p>Fee: $199</p></div>
-        <div class="account-card"><h3>Professional</h3><p>Balance: $50,000</p><p>Profit Target: 12%</p><p>Drawdown: 15%</p><p>Fee: $299</p></div>
-        <div class="account-card"><h3>Elite</h3><p>Balance: $100,000</p><p>Profit Target: 15%</p><p>Drawdown: 20%</p><p>Fee: $599</p></div>
-      </div>
-    </section>
+        <!-- Card View -->
+        <div class="card-view hidden">
+          <div class="account-card">
+            <h3>Basic</h3>
+            <p>Balance: $5,000</p>
+            <p>Profit Target: 6%</p>
+            <p>Drawdown: 8%</p>
+            <p>Fee: $49</p>
+          </div>
+          <div class="account-card">
+            <h3>Starter</h3>
+            <p>Balance: $10,000</p>
+            <p>Profit Target: 8%</p>
+            <p>Drawdown: 10%</p>
+            <p>Fee: $99</p>
+          </div>
+          <div class="account-card">
+            <h3>Advanced</h3>
+            <p>Balance: $25,000</p>
+            <p>Profit Target: 10%</p>
+            <p>Drawdown: 12%</p>
+            <p>Fee: $199</p>
+          </div>
+          <div class="account-card">
+            <h3>Professional</h3>
+            <p>Balance: $50,000</p>
+            <p>Profit Target: 12%</p>
+            <p>Drawdown: 15%</p>
+            <p>Fee: $299</p>
+          </div>
+          <div class="account-card">
+            <h3>Elite</h3>
+            <p>Balance: $100,000</p>
+            <p>Profit Target: 15%</p>
+            <p>Drawdown: 20%</p>
+            <p>Fee: $599</p>
+          </div>
+        </div>
+      </section>
 
-    <!-- Funding Rules -->
-    <section class="funding-rules">
-      <h2>Funding Rules</h2>
-      <ol>
-        <li>Daily loss limit: 5% of account balance.</li>
-        <li>Overall drawdown limit: 10% of account balance.</li>
-        <li>Minimum trading days: 5 days per phase.</li>
-        <li>Consistency rule: Profits must be spread across multiple trades.</li>
-        <li>Leverage: Up to 1:100 depending on account type.</li>
-      </ol>
-    </section>
+      <!-- Funding Rules -->
+      <section class="funding-rules">
+        <h2>Funding Rules</h2>
+        <ol>
+          <li>Daily loss limit: 5% of account balance.</li>
+          <li>Overall drawdown limit: 10% of account balance.</li>
+          <li>Minimum trading days: 5 days per phase.</li>
+          <li>
+            Consistency rule: Profits must be spread across multiple trades.
+          </li>
+          <li>Leverage: Up to 1:100 depending on account type.</li>
+        </ol>
+      </section>
 
-    <!-- Trading Conditions -->
-    <section class="trading-conditions">
-      <h2>Payout Cycle Plan</h2>
-      <ol>
-        <li>First payout available after 30 trading days</li>
-        <li>Regular payouts every 14 days thereafter</li>
-        <li>Express payout option for balances above $500</li>
-        <li>Quarterly bonus for consistent profitability</li>
-        <li>All payouts processed within 3 business days</li>
-      </ol>
-    </section>
+      <!-- Trading Conditions -->
+      <section class="trading-conditions">
+        <h2>Payout Cycle Plan</h2>
+        <ol>
+          <li>First payout available after 30 trading days</li>
+          <li>Regular payouts every 14 days thereafter</li>
+          <li>Express payout option for balances above $500</li>
+          <li>Quarterly bonus for consistent profitability</li>
+          <li>All payouts processed within 3 business days</li>
+        </ol>
+      </section>
 
-    <!-- Call to Action -->
-    <section class="cta">
-      <h2>Ready to Start?</h2>
-      <p>Choose your account type and begin your evaluation today.</p>
-      <a href="login.html" class="btn">Get Started</a>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="newsletter">
-    <p>Subscribe to our Newsletter</p>
-    <form action="#" method="post">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-
-    <!-- Disclaimer Section -->
-    <div class="disclaimer">
-      <h3>Important Information & Disclaimer</h3>
-      <p><strong>Simulated Trading Environment</strong><br>
-      All accounts provided by FundingPips are demo accounts operating exclusively in a simulated trading environment. No actual trades are executed on live financial markets. The services we offer are designed for educational and evaluation purposes only.</p>
-
-      <p><strong>No Investment Services</strong><br>
-      The simulated trading services are provided by FundingPips Corp. All content published and distributed by FundingPips and its related entities (collectively, the "Company") is for general information only.</p>
-
-      <ul>
-        <li>The Company does not provide investment advice.</li>
-        <li>The Company does not solicit or recommend the purchase or sale of any financial instruments, securities, or funds.</li>
-        <li>The Company does not act as a broker, custodian, or financial intermediary.</li>
-      </ul>
-
-      <p>Participation in any of our programs is entirely voluntary, and all fees paid to the Company are strictly service fees. Program fees are not deposits, do not represent client funds, and should not be considered investments under any circumstances. These fees are non-refundable once paid, except where required by applicable laws, and they do not earn interest, returns, or profit sharing of any kind. Instead, all program fees are applied toward the Company's operational and administrative expenses, including but not limited to staffing, technology infrastructure, platform development and maintenance, software licensing, risk management systems, customer support, and other business-related costs. Payment of program fees does not create any fiduciary duty, custodial relationship, or investment arrangement between participants and the Company, and participants should understand that such fees provide access only to simulated trading evaluations and related services in a demo environment.</p>
-
-      <p>Nothing on this website or in our programs constitutes an offer to buy or sell futures, options, CFDs, forex, stocks, or any other financial instruments. All results displayed are based on simulated trading performance. Past simulated performance is not necessarily indicative of future results.</p>
+      <!-- Call to Action -->
+      <section class="cta">
+        <h2>Ready to Start?</h2>
+        <p>Choose your account type and begin your evaluation today.</p>
+        <a href="login.html" class="btn">Get Started</a>
+      </section>
     </div>
-    <p>© 2025 FundsInn Prop Firm. All rights reserved.</p>
-    <p>
-      <a href="https://www.instagram.com">Instagram</a> |
-      <a href="https://www.facebook.com">Facebook</a> |
-      <a href="https://www.discord.com">Discord</a> |
-      <a href="https://www.linkedin.com">LinkedIn</a> |
-      <a href="https://www.x.com">X (Twitter)</a> |
-      <a href="https://www.youtube.com">YouTube</a>
-    </p>
-  </footer>
-  
-  <script>
-// ============================
-// Tab Switching
-// ============================
-const tabs = document.querySelectorAll(".tab-btn");
-const contents = document.querySelectorAll(".tab-content");
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    // remove active from all
-    tabs.forEach(t => t.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
-    // add active to clicked tab and its content
-    tab.classList.add("active");
-    document.getElementById(tab.dataset.tab).classList.add("active");
-  });
-});
+    <!-- Footer -->
+    <footer>
+      <div class="newsletter">
+        <p>Subscribe to our Newsletter</p>
+        <form action="#" method="post">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
 
-// ============================
-// Toggle Table vs Card View
-// ============================
-const toggleBtn = document.getElementById("toggleView");
-const cardView = document.querySelector(".card-view");
-const tableView = document.querySelector("table");
+      <!-- Disclaimer Section -->
+      <div class="disclaimer">
+        <h3>Important Information & Disclaimer</h3>
+        <p>
+          <strong>Simulated Trading Environment</strong><br />
+          All accounts provided by FundingPips are demo accounts operating
+          exclusively in a simulated trading environment. No actual trades are
+          executed on live financial markets. The services we offer are designed
+          for educational and evaluation purposes only.
+        </p>
 
-toggleBtn.addEventListener("click", () => {
-  cardView.classList.toggle("hidden");
-  tableView.classList.toggle("hidden");
-  toggleBtn.textContent = cardView.classList.contains("hidden") 
-    ? "Switch to Card View" 
-    : "Switch to Table View";
-});
+        <p>
+          <strong>No Investment Services</strong><br />
+          The simulated trading services are provided by FundingPips Corp. All
+          content published and distributed by FundingPips and its related
+          entities (collectively, the "Company") is for general information
+          only.
+        </p>
 
-// ============================
-// Filter Accounts by Balance
-// ============================
-const balanceFilter = document.getElementById("balance");
-balanceFilter.addEventListener("change", () => {
-  const value = balanceFilter.value;
+        <ul>
+          <li>The Company does not provide investment advice.</li>
+          <li>
+            The Company does not solicit or recommend the purchase or sale of
+            any financial instruments, securities, or funds.
+          </li>
+          <li>
+            The Company does not act as a broker, custodian, or financial
+            intermediary.
+          </li>
+        </ul>
 
-  // filter table rows
-  const rows = tableView.querySelectorAll("tr:not(:first-child)");
-  rows.forEach(row => {
-    const balance = parseInt(row.cells[1].textContent.replace(/[^0-9]/g,""));
-    row.style.display = (value === "all" ||
-      (value === "small" && balance < 10000) ||
-      (value === "medium" && balance >= 25000 && balance <= 50000) ||
-      (value === "large" && balance >= 100000)) ? "" : "none";
-  });
+        <p>
+          Participation in any of our programs is entirely voluntary, and all
+          fees paid to the Company are strictly service fees. Program fees are
+          not deposits, do not represent client funds, and should not be
+          considered investments under any circumstances. These fees are
+          non-refundable once paid, except where required by applicable laws,
+          and they do not earn interest, returns, or profit sharing of any kind.
+          Instead, all program fees are applied toward the Company's operational
+          and administrative expenses, including but not limited to staffing,
+          technology infrastructure, platform development and maintenance,
+          software licensing, risk management systems, customer support, and
+          other business-related costs. Payment of program fees does not create
+          any fiduciary duty, custodial relationship, or investment arrangement
+          between participants and the Company, and participants should
+          understand that such fees provide access only to simulated trading
+          evaluations and related services in a demo environment.
+        </p>
 
-  // filter cards
-  const cards = cardView.querySelectorAll(".account-card");
-  cards.forEach(card => {
-    const balanceText = card.querySelector("p").textContent;
-    const balance = parseInt(balanceText.replace(/[^0-9]/g,""));
-    card.style.display = (value === "all" ||
-      (value === "small" && balance < 10000) ||
-      (value === "medium" && balance >= 25000 && balance <= 50000) ||
-      (value === "large" && balance >= 100000)) ? "" : "none";
-  });
-});
-</script>
+        <p>
+          Nothing on this website or in our programs constitutes an offer to buy
+          or sell futures, options, CFDs, forex, stocks, or any other financial
+          instruments. All results displayed are based on simulated trading
+          performance. Past simulated performance is not necessarily indicative
+          of future results.
+        </p>
+      </div>
+      <p>© 2025 FundsInn Prop Firm. All rights reserved.</p>
+      <p>
+        <a href="https://www.instagram.com">Instagram</a> |
+        <a href="https://www.facebook.com">Facebook</a> |
+        <a href="https://www.discord.com">Discord</a> |
+        <a href="https://www.linkedin.com">LinkedIn</a> |
+        <a href="https://www.x.com">X (Twitter)</a> |
+        <a href="https://www.youtube.com">YouTube</a>
+      </p>
+    </footer>
 
+    <script>
+      // ============================
+      // Tab Switching
+      // ============================
+      const tabs = document.querySelectorAll(".tab-btn");
+      const contents = document.querySelectorAll(".tab-content");
 
-</body>
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // remove active from all
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+          // add active to clicked tab and its content
+          tab.classList.add("active");
+          document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+      });
+
+      // ============================
+      // Toggle Table vs Card View
+      // ============================
+      const toggleBtn = document.getElementById("toggleView");
+      const cardView = document.querySelector(".card-view");
+      const tableView = document.querySelector("table");
+
+      toggleBtn.addEventListener("click", () => {
+        cardView.classList.toggle("hidden");
+        tableView.classList.toggle("hidden");
+        toggleBtn.textContent = cardView.classList.contains("hidden")
+          ? "Switch to Card View"
+          : "Switch to Table View";
+      });
+
+      // ============================
+      // Filter Accounts by Balance
+      // ============================
+      const balanceFilter = document.getElementById("balance");
+      balanceFilter.addEventListener("change", () => {
+        const value = balanceFilter.value;
+
+        // filter table rows
+        const rows = tableView.querySelectorAll("tr:not(:first-child)");
+        rows.forEach((row) => {
+          const balance = parseInt(
+            row.cells[1].textContent.replace(/[^0-9]/g, ""),
+          );
+          row.style.display =
+            value === "all" ||
+            (value === "small" && balance < 10000) ||
+            (value === "medium" && balance >= 25000 && balance <= 50000) ||
+            (value === "large" && balance >= 100000)
+              ? ""
+              : "none";
+        });
+
+        // filter cards
+        const cards = cardView.querySelectorAll(".account-card");
+        cards.forEach((card) => {
+          const balanceText = card.querySelector("p").textContent;
+          const balance = parseInt(balanceText.replace(/[^0-9]/g, ""));
+          card.style.display =
+            value === "all" ||
+            (value === "small" && balance < 10000) ||
+            (value === "medium" && balance >= 25000 && balance <= 50000) ||
+            (value === "large" && balance >= 100000)
+              ? ""
+              : "none";
+        });
+      });
+    </script>
+  </body>
 </html>
